@@ -30,7 +30,7 @@ plt.xlabel('Epsilon')
 plt.ylabel('Number of Mesurements')
 plt.savefig('Q1Hist.png', format='png', bbox_inches='tight')
 plt.show()
-quit()
+
 
 #Question 2
 print('Question 2\n')
@@ -51,8 +51,8 @@ H0, H_sig, H = genError(0.03, 0.003, N)
 Del0, Del_sig, Del = genError(0.008, 0.00008, N)
 
 # Next, compute an array of N 
-E = (4*F*(L**3))/(3*Del*B*(H**3)) 
-E0 = (4*F0*(L0**3))/(3*Del0*B0*(H0**3)) 
+E = (4*F*(L**3))/(Del*B*(H**3)) 
+E0 = (4*F0*(L0**3))/(Del0*B0*(H0**3)) 
 
 # Compute standeard diviation and mean of E normalized by the E best
 E_sdt_rel = np.std(E)/E0
